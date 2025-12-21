@@ -132,3 +132,14 @@ rnd_search = RandomizedSearchCV(full_pipeline, param_distributions=param_distrib
 scoring='neg_root_mean_squared_error', random_state=42)
 
 rnd_search.fit(housing, housing_labels)
+
+# Export the best model
+import joblib
+
+# Export the best model from randomized search
+# best_model = rnd_search.best_estimator_
+# joblib.dump(best_model, "housing_model.pkl")
+# print(f"Model exported to housing_model.pkl")
+# print(f"Best parameters: {rnd_search.best_params_}")
+# print(f"Best RMSE: {-rnd_search.best_score_:.2f}")
+
